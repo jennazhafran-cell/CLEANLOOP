@@ -1,0 +1,21 @@
+# CleanLoop — Laundry Pickup & Delivery
+
+Fullstack: Express + better-sqlite3 + frontend statis.
+
+## Setup pertama
+
+```bash
+# 1. Backend
+cd server
+npm install
+
+# 2. Konfigurasi
+cp ../.env.example ../.env
+# edit ../.env — isi ADMIN_EMAIL & ADMIN_PASSWORD
+
+# 3. Buat admin pertama
+npm run seed
+
+# 4. Jalankan
+npm start
+# → http://localhost:3000
