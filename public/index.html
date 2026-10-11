@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CleanLoop — Laundry Pickup & Delivery</title>
+<meta name="description" content="CleanLoop: layanan laundry pickup &amp; delivery. Regular, Express, Dry Cleaning, dan Bed &amp; Bath dengan harga per kilogram yang transparan. Pesan online, kami jemput dan antar.">
+<meta name="theme-color" content="#0a0a0a">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="CleanLoop">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="id_ID">
+<meta property="og:title" content="CleanLoop — Laundry Pickup &amp; Delivery">
+<meta property="og:description" content="CleanLoop: layanan laundry pickup &amp; delivery. Regular, Express, Dry Cleaning, dan Bed &amp; Bath dengan harga per kilogram yang transparan. Pesan online, kami jemput dan antar.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='9' fill='%230a0a0a'/%3E%3Cpath d='M20 5a15 15 0 1 0 0 30' fill='none' stroke='%23fff' stroke-width='4' stroke-linecap='round'/%3E%3Cpath d='M20 13a7 7 0 1 0 7 7' fill='none' stroke='%23fff' stroke-width='4' stroke-linecap='round'/%3E%3Ccircle cx='27' cy='13' r='3' fill='%23fff'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Lewati ke konten</a>
+<noscript><div style="padding:12px;text-align:center;background:#fff;color:#000;font-size:.85rem">Situs ini membutuhkan JavaScript untuk menampilkan layanan, harga, dan form pemesanan.</div></noscript>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="logo" viewBox="0 0 40 40"><path d="M20 3a17 17 0 1 0 0 34" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round"/><path d="M20 12a8 8 0 1 0 8 8" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round"/><circle cx="28" cy="12" r="3" fill="#fff"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-shirt" viewBox="0 0 24 24"><path d="M8 3 3 6l2 4 3-1v12h8V9l3 1 2-4-5-3a4 4 0 0 1-8 0z"/></symbol>
+    <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></symbol>
+    <symbol id="i-hanger" viewBox="0 0 24 24"><path d="M12 8V6.5a2 2 0 1 1 2 2M12 8 2 17c-.8.8-.2 2 1 2h18c1.200 0 1.800-1.200 1-2z"/></symbol>
+    <symbol id="i-bed" viewBox="0 0 24 24"><path d="M3 18V7M3 14h18v4M21 14v-2a3 3 0 0 0-3-3h-6v5M7 11.500h1"/></symbol>
+    <symbol id="i-truck" viewBox="0 0 24 24"><path d="M2 6h11v10H2zM13 9h4l4 4v3h-8M6 19a1.500 1.500 0 1 0 0-.1M17 19a1.500 1.500 0 1 0 0-.1"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3l1.800 5.200L19 10l-5.200 1.800L12 17l-1.800-5.200L5 10l5.200-1.800zM19 16l.8 2.200L22 19l-2.200.8L19 22l-.8-2.200L16 19l2.200-.8z"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l3 2M9 2h6"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="3"/><path d="m8.500 12.500 2.500 2.500 4.500-5"/></symbol>
+    <symbol id="i-cal" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.500-7 8-7s8 3 8 7"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 4 6v6c0 5 3.500 8 8 9 4.500-1 8-4 8-9V6z"/><path d="m9 12 2 2 4-4"/></symbol>
+    <symbol id="i-tag" viewBox="0 0 24 24"><path d="M4 4h8l8 8-8 8-8-8z"/><circle cx="8.500" cy="8.500" r="1.200"/></symbol>
+    <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M5 19C5 9 11 4 20 4c0 9-5 15-15 15zM5 19l8-8"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.600 7.100L4 20l1-4.600A8 8 0 1 1 21 12z"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-6.200 7-11a7 7 0 1 0-14 0c0 4.800 7 11 7 11z"/><circle cx="12" cy="10" r="2.500"/></symbol>
+    <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></symbol>
+  </defs>
+</svg>
+
+<header>
+  <div class="wrap nav">
+    <a href="#beranda" class="brand" aria-label="CleanLoop beranda">
+      <img src="images/logo.png" alt="Logo CleanLoop" class="brand-img">
+      <span><b>CleanLoop</b><small>Laundry Pickup &amp; Delivery</small></span>
+    </a>
+    <nav class="menu" aria-label="Navigasi utama">
+      <a href="#beranda">Beranda</a>
+      <a href="#layanan">Layanan</a>
+      <a href="#harga">Harga</a>
+      <a href="#tentang">Tentang Kami</a>
+      <a href="#kontak">Kontak</a>
+    </nav>
+    <div class="auth" id="authContainer">
+      <button class="btn btn-outline" data-open-auth="login">Masuk</button>
+      <button class="btn btn-light" data-open-auth="register">Daftar</button>
+    </div>
+    <button class="burger" id="burger" aria-label="Buka menu" aria-expanded="false" aria-controls="drawer"><span></span></button>
+  </div>
+  <div class="drawer" id="drawer">
+    <a href="#beranda">Beranda</a>
+    <a href="#layanan">Layanan</a>
+    <a href="#harga">Harga</a>
+    <a href="#tentang">Tentang Kami</a>
+    <a href="#kontak">Kontak</a>
+    <div id="drawerAuth" style="padding: 0 var(--pad); display: flex; flex-direction: column; gap: 10px; margin-bottom: 14px;">
+      <button class="btn btn-outline" data-open-auth="login" style="width:100%; justify-content:center;">Masuk</button>
+      <button class="btn btn-light" data-open-auth="register" style="width:100%; justify-content:center;">Daftar</button>
+    </div>
+    <button class="btn btn-outline" id="openAdminBtnMobile" hidden style="margin: 0 var(--pad) 6px; width: calc(100% - 2*var(--pad)); justify-content: center; border-color:#555;">Dashboard Admin</button>
+    <button class="btn btn-outline" id="openStaffBtnMobile" hidden style="margin: 0 var(--pad) 10px; width: calc(100% - 2*var(--pad)); justify-content: center; border-color:#555;">Dashboard Karyawan</button>
+    <button class="btn btn-light" data-open-order style="margin: 0 var(--pad) 18px; width: calc(100% - 2*var(--pad)); justify-content: center;">Pesan Sekarang</button>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero" id="beranda">
+  <div class="wrap hero-inner">
+    <div>
+      <p class="eyebrow">Laundry Pickup &amp; Delivery</p>
+      <h1 class="serif">Pakaian Bersih,<br>Hidup Lebih Mudah</h1>
+      <p class="lead">Nikmati layanan laundry modern dengan sistem pickup &amp; delivery. Kami hadir untuk memberikan pakaian bersih, wangi, dan rapi — tanpa perlu keluar rumah.</p>
+      <div class="cta-row">
+        <button class="btn btn-light" data-open-order>Pesan Sekarang <svg class="ico"><use href="#i-arrow"/></svg></button>
+        <a class="btn btn-outline" href="#layanan">Lihat Layanan</a>
+        <button class="btn btn-outline" id="openAdminBtn" hidden style="border-color:#555;">Admin</button>
+        <button class="btn btn-outline" id="openStaffBtn" hidden style="border-color:#555;">Karyawan</button>
+      </div>
+      <div class="feats">
+        <div class="feat"><span class="circ"><svg class="ico"><use href="#i-truck"/></svg></span><span><b>Pickup &amp; Delivery</b>Setiap Hari</span></div>
+        <div class="feat"><span class="circ"><svg class="ico"><use href="#i-spark"/></svg></span><span><b>Bersih &amp; Wangi</b>Dengan Teknologi Modern</span></div>
+        <div class="feat"><span class="circ"><svg class="ico"><use href="#i-clock"/></svg></span><span><b>Pengerjaan Cepat</b>Hanya 1-2 Hari</span></div>
+      </div>
+    </div>
+    <div class="hero-art">
+      <img src="images/1.jpg" alt="Layanan Laundry CleanLoop" class="img-placeholder hero-img" width="460" height="380" fetchpriority="high" decoding="async">
+    </div>
+  </div>
+</section>
+
+<section class="light sec" id="layanan">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <h2 class="serif">Layanan Kami</h2>
+        <p class="muted">Kami menyediakan berbagai layanan laundry dengan kualitas terbaik dan harga yang transparan.</p>
+      </div>
+      <a class="linkmore" href="#harga">Lihat Semua Layanan <svg class="ico" style="width:14px;height:14px"><use href="#i-arrow"/></svg></a>
+    </div>
+    <div class="cards" id="cards"></div>
+  </div>
+</section>
+
+<section class="how" id="cara-pesan">
+  <div class="wrap how-grid">
+    <div>
+      <h2 class="serif">Cara Pesan</h2>
+      <p class="sub">Mudah, cepat, dan praktis. Cukup 4 langkah saja.</p>
+      <div class="steps">
+        <div class="step"><span class="ci"><svg class="ico"><use href="#i-check"/></svg></span><b>1. Pilih Layanan</b><p>Tentukan jenis laundry yang kamu butuhkan.</p></div>
+        <div class="step"><span class="ci"><svg class="ico"><use href="#i-cal"/></svg></span><b>2. Jadwalkan Pickup</b><p>Pilih waktu dan alamat penjemputan.</p></div>
+        <div class="step"><span class="ci"><svg class="ico"><use href="#i-user"/></svg></span><b>3. Kami Jemput</b><p>Tim kami akan datang sesuai jadwal.</p></div>
+        <div class="step"><span class="ci"><svg class="ico"><use href="#i-truck"/></svg></span><b>4. Laundry &amp; Antar</b><p>Pakaian kembali bersih dan siap digunakan.</p></div>
+      </div>
+    </div>
+    <div class="phone-wrap" aria-hidden="true">
+      <div class="phone">
+        <div class="pb"><img src="images/logo.png" alt="" width="20" height="20" loading="lazy" style="width:20px;height:20px;border-radius:4px;object-fit:cover;">CleanLoop</div>
+        <h4 class="serif">Bersih<br>Dalam Genggaman</h4>
+        <span class="mini">Pesan Sekarang</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="why">
+  <div class="courier">
+    <img src="images/2.jpg" alt="Kurir Laundry CleanLoop" class="img-placeholder courier-img" width="480" height="300" loading="lazy" decoding="async">
+  </div>
+  <div class="why-list">
+    <h3 class="serif">Mengapa Memilih CleanLoop?</h3>
+    <ul>
+      <li><svg class="ico"><use href="#i-shirt"/></svg><div><b>Tim Profesional</b><span>Dikerjakan oleh tenaga berpengalaman.</span></div></li>
+      <li><svg class="ico"><use href="#i-shield"/></svg><div><b>Aman &amp; Terpercaya</b><span>Pakaian Anda adalah prioritas kami.</span></div></li>
+      <li><svg class="ico"><use href="#i-tag"/></svg><div><b>Harga Transparan</b><span>Tanpa biaya tersembunyi.</span></div></li>
+      <li><svg class="ico"><use href="#i-leaf"/></svg><div><b>Ramah Lingkungan</b><span>Menggunakan deterjen eco-friendly.</span></div></li>
+    </ul>
+  </div>
+  <div class="cta-box">
+    <h3 class="serif">Siap hidup lebih mudah dengan laundry kami?</h3>
+    <p>Pesan sekarang dan rasakan pengalaman laundry yang berbeda.</p>
+    <button class="btn btn-light" data-open-order>Pesan Sekarang <svg class="ico"><use href="#i-arrow"/></svg></button>
+  </div>
+</section>
+
+<section class="pricing" id="harga">
+  <div class="wrap">
+    <h2 class="serif">Harga &amp; Simulasi Biaya</h2>
+    <p style="color:var(--muted);font-size:.88rem;margin-bottom:20px">Harga per kilogram transparan. Gunakan kalkulator di bawah untuk menghitung estimasi biaya seketika.</p>
+    
+    <div class="calc-box">
+      <div class="calc-top">
+        <label for="simulasiBerat"><b>Simulasi Berat Pakaian:</b></label>
+        <div class="calc-input-wrap">
+          <input type="number" id="simulasiBerat" min="1" max="50" value="3" inputmode="decimal" step="0.5">
+          <span>Kilogram (kg)</span>
+        </div>
+      </div>
+      <p style="font-size:0.75rem; color:var(--muted);">*Gratis ongkos antar-jemput untuk pesanan minimal 5 kg.</p>
+    </div>
+
+    <div class="price-table" id="priceTable"></div>
+  </div>
+</section>
+
+<section class="testi" id="testimoni" hidden>
+  <div class="wrap">
+    <div class="sec-head"><div><h2 class="serif">Kata Pelanggan</h2><p id="testiMeta"></p></div></div>
+    <div class="tcards" id="testiList"></div>
+  </div>
+</section>
+
+<section class="light about" id="tentang">
+  <div class="wrap">
+    <h2 class="serif">Tentang Kami</h2>
+    <div class="about-grid">
+      <div>
+        <p><span class="accent">CleanLoop</span> adalah layanan laundry pickup &amp; delivery yang berkomitmen memberikan kemudahan, kualitas terbaik, dan kepuasan pelanggan.</p>
+        <h4>Visi</h4>
+        <p>Menjadi layanan laundry terdepan di Indonesia yang inovatif, terpercaya, dan ramah lingkungan.</p>
+        <h4>Misi</h4>
+        <ul>
+          <li>Memberikan layanan terbaik dengan teknologi modern.</li>
+          <li>Menjaga kualitas dan kebersihan pakaian pelanggan.</li>
+          <li>Mendukung gaya hidup praktis dan efisien.</li>
+          <li>Berperan dalam menjaga lingkungan.</li>
+        </ul>
+      </div>
+      <div>
+        <img src="images/4.jpg" alt="Outlet CleanLoop Laundry" class="img-placeholder about-img" width="520" height="320" loading="lazy" decoding="async">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq" id="faq">
+  <div class="wrap">
+    <h2 class="serif">Pertanyaan Umum</h2>
+    <p class="faq-sub">Jawaban singkat untuk hal yang paling sering ditanyakan.</p>
+    <div class="faq-list">
+      <details>
+        <summary>Berapa lama laundry selesai?</summary>
+        <p>Regular dan Bed &amp; Bath 2 hari, Express 1 hari (24 jam), dan Dry Cleaning 3 hari, dihitung sejak tanggal penjemputan.</p>
+      </details>
+      <details>
+        <summary>Apakah ada biaya antar-jemput?</summary>
+        <p>Gratis untuk pesanan minimal 5 kg. Di bawah 5 kg dikenakan ongkos antar-jemput Rp 8.000.</p>
+      </details>
+      <details>
+        <summary>Jam berapa kurir bisa menjemput?</summary>
+        <p>Tersedia empat slot: 09.00-12.00, 12.00-15.00, 15.00-18.00, dan 18.00-21.00. Slot hari ini yang sudah lewat tidak bisa dipilih.</p>
+      </details>
+      <details>
+        <summary>Apakah harus punya akun untuk memesan?</summary>
+        <p>Ya. Masuk atau daftar dulu supaya pesanan Anda tercatat dan bisa dilacak kapan saja dari dashboard.</p>
+      </details>
+      <details>
+        <summary>Bagaimana cara bayarnya?</summary>
+        <p>Bisa bayar online (QRIS, Virtual Account, e-wallet, kartu, atau minimarket) atau bayar di tempat (COD). Biaya layanan untuk pembayaran online ditampilkan sebelum Anda membayar.</p>
+      </details>
+      <details>
+        <summary>Bagaimana cara melacak pesanan?</summary>
+        <p>Masuk ke akun, lalu buka Dashboard dan pilih Pesanan Saya. Status berjalan dari Menunggu Penjemputan, Sedang Dicuci, Disetrika, Siap Diantar, sampai Selesai.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="light kontak" id="kontak">
+  <div class="wrap">
+    <h2 class="serif">Hubungi Kami</h2>
+    <p class="muted kontak-sub">Ada pertanyaan atau ingin pesan lewat WhatsApp? Kami siap membantu.</p>
+    <!-- GANTI alamat, jam, dan area layanan di bawah dengan data asli bisnis. Nomor WhatsApp diatur di script.js (WA_NUMBER). -->
+    <div class="contact-grid">
+      <a class="contact-card" data-wa="Halo CleanLoop, saya ingin bertanya tentang layanan laundry." href="#kontak" target="_blank" rel="noopener">
+        <span class="ci"><svg class="ico"><use href="#i-chat"/></svg></span>
+        <b>WhatsApp</b>
+        <span data-wa-text>0800 0000 0000</span>
+        <small>Klik untuk chat</small>
+      </a>
+      <div class="contact-card">
+        <span class="ci"><svg class="ico"><use href="#i-pin"/></svg></span>
+        <b>Alamat Outlet</b>
+        <span>Jl. Contoh Raya No. 12</span>
+        <small>Kota Anda</small>
+      </div>
+      <div class="contact-card">
+        <span class="ci"><svg class="ico"><use href="#i-clock"/></svg></span>
+        <b>Jam Operasional</b>
+        <span>Setiap hari</span>
+        <small>08.00 - 21.00</small>
+      </div>
+      <div class="contact-card">
+        <span class="ci"><svg class="ico"><use href="#i-truck"/></svg></span>
+        <b>Area Layanan</b>
+        <span>Radius sekitar 10 km</span>
+        <small>dari outlet</small>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <a href="#beranda" class="brand" aria-label="CleanLoop beranda">
+        <img src="images/logo.png" alt="Logo CleanLoop" class="brand-img-footer">
+      </a>
+      <nav aria-label="Navigasi footer">
+        <a href="#beranda">Beranda</a><a href="#layanan">Layanan</a><a href="#harga">Harga</a><a href="#tentang">Tentang Kami</a><a href="#kontak">Kontak</a>
+      </nav>
+      <div class="social">
+        <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><svg class="ico" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.500" cy="6.500" r=".6"/></svg></a>
+        <a href="#kontak" data-wa="Halo CleanLoop, saya ingin bertanya." target="_blank" rel="noopener" aria-label="WhatsApp"><svg class="ico" viewBox="0 0 24 24"><path d="M3 21l1.500-4.500A9 9 0 1 1 8 19.500z"/><path d="M9 9c0 3 3 6 6 6l1-2-2-1-1 .8c-.8-.4-1.600-1.200-2-2l.8-1-1-2z"/></svg></a>
+        <a href="https://tiktok.com" target="_blank" rel="noopener" aria-label="TikTok"><svg class="ico" viewBox="0 0 24 24"><path d="M14 3v11a4 4 0 1 1-4-4M14 3c0 3 2 5 5 5"/></svg></a>
+        <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube"><svg class="ico" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="m10 9 5 3-5 3z"/></svg></a>
+      </div>
+    </div>
+    <p class="copy">© <span id="year">2026</span> CleanLoop. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- Modal Pemesanan -->
+<div class="overlay" id="overlay" role="dialog" aria-modal="true" aria-labelledby="mTitle">
+  <div class="modal">
+    <button class="close" id="closeBtn" aria-label="Tutup">×</button>
+
+    <div id="formView">
+      <h2 class="serif" id="mTitle">Pesan Laundry</h2>
+      <p class="sub">Isi data di bawah untuk menjadwalkan pickup laundry.</p>
+      <div class="seg" role="tablist">
+        <button type="button" class="on" data-mode="Pickup" role="tab" aria-selected="true">Pickup</button>
+        <button type="button" data-mode="Delivery" role="tab" aria-selected="false">Delivery</button>
+      </div>
+      <form id="orderForm" novalidate>
+        <div class="fld"><label for="nama">Nama Lengkap</label><input id="nama" type="text" maxlength="60" placeholder="Masukkan nama Anda" autocomplete="name"><span class="msg">Nama wajib diisi.</span></div>
+        <div class="fld"><label for="telp">Nomor WhatsApp</label><input id="telp" type="tel" maxlength="16" placeholder="08xxxxxxxxxx" autocomplete="tel" inputmode="tel"><span class="msg">Masukkan nomor WhatsApp yang valid (mis. 08xxxxxxxxxx).</span></div>
+        <div class="fld" id="fldSaved" hidden><label for="alamatTersimpan">Alamat Tersimpan</label><select id="alamatTersimpan"></select></div>
+        <div class="fld"><label for="alamat" id="lblAlamat">Alamat Penjemputan</label><input id="alamat" type="text" maxlength="200" placeholder="Masukkan alamat lengkap" autocomplete="street-address"><span class="msg">Alamat minimal 10 karakter.</span></div>
+        <div class="row2">
+          <div class="fld"><label for="tanggal" id="lblTgl">Tanggal Penjemputan</label><input id="tanggal" type="date"><span class="msg">Pilih tanggal.</span></div>
+          <div class="fld"><label for="waktu" id="lblWaktu">Waktu Penjemputan</label><select id="waktu"></select><span class="msg">Slot hari ini sudah lewat, pilih slot lain.</span></div>
+        </div>
+        <div class="fld"><label for="layanan-sel">Jenis Layanan</label>
+          <select id="layanan-sel"><option value="">Pilih layanan</option></select>
+          <span class="msg">Pilih jenis layanan.</span>
+        </div>
+        <div class="fld"><label for="berat">Perkiraan Berat (kg)</label><input id="berat" type="number" min="1" max="50" value="3" inputmode="decimal" step="0.5"><span class="msg">Berat 1–50 kg.</span></div>
+        <div class="fld"><label for="pembayaran">Metode Pembayaran</label>
+          <select id="pembayaran">
+            <option value="Online">Bayar online (QRIS, Virtual Account, e-wallet, kartu, minimarket)</option>
+            <option value="COD">Bayar di tempat (COD)</option>
+          </select>
+        </div>
+        <div class="fld"><label for="catatan">Catatan (opsional)</label><input id="catatan" type="text" maxlength="150" placeholder="Contoh: pagar hijau, telepon dulu"></div>
+        <div class="fld"><label for="promo">Kode Promo (opsional)</label>
+          <div class="promo-row"><input id="promo" type="text" maxlength="20" placeholder="Contoh: PERTAMA10" autocomplete="off" autocapitalize="characters" spellcheck="false"><button type="button" class="promo-btn" id="promoBtn">Pakai</button></div>
+          <small class="promo-msg" id="promoMsg" aria-live="polite"></small>
+        </div>
+        <div class="estimate" aria-live="polite">
+          <div><span>Layanan</span><span id="eLayanan">—</span></div>
+          <div><span>Estimasi selesai</span><span id="eSelesai">—</span></div>
+          <div><span>Ongkos antar-jemput</span><span id="eOngkir">—</span></div>
+          <div id="eDiskonRow" hidden><span>Diskon promo</span><span id="eDiskon">—</span></div>
+          <div class="tot"><span>Estimasi total</span><span id="eTotal">Rp 0</span></div>
+        </div>
+        <button type="submit" class="btn btn-dark">Lanjutkan Pesanan <svg class="ico"><use href="#i-arrow"/></svg></button>
+        <p class="note"><svg class="ico"><use href="#i-info"/></svg>Tim kami akan menghubungi Anda untuk konfirmasi jadwal.</p>
+      </form>
+    </div>
+
+    <div id="doneView" class="success" hidden>
+      <div class="ok">✓</div>
+      <h2 class="serif">Pesanan Diterima</h2>
+      <p class="sub" style="margin-bottom:0">Kode pesanan <b id="kode"></b></p>
+      <div class="sum" id="sum"></div>
+      <a class="btn btn-dark" id="payNowLink" href="dashboard.html" hidden style="margin-bottom:10px">Bayar sekarang</a>
+      <a class="btn btn-wa" id="waConfirm" href="#" target="_blank" rel="noopener" style="margin-bottom:10px">Konfirmasi via WhatsApp</a>
+      <button class="btn btn-dark" id="doneBtn">Selesai</button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Auth (Login & Register) -->
+<div class="overlay" id="authOverlay" role="dialog" aria-modal="true" aria-labelledby="authTitle">
+  <div class="modal">
+    <button class="close" id="authCloseBtn" aria-label="Tutup">×</button>
+
+    <!-- Form Login -->
+    <div id="loginView">
+      <h2 class="serif" id="authTitle">Masuk ke CleanLoop</h2>
+      <p class="sub">Silakan masukkan akun Anda untuk melanjutkan.</p>
+      <form id="loginForm" novalidate>
+        <div class="fld"><label for="loginEmail">Email</label><input id="loginEmail" type="email" placeholder="nama@email.com" autocomplete="email"><span class="msg">Email wajib diisi.</span></div>
+        <div class="fld"><label for="loginPass">Kata Sandi</label><input id="loginPass" type="password" placeholder="••••••••" autocomplete="current-password"><span class="msg">Kata sandi wajib diisi.</span></div>
+        <button type="submit" class="btn btn-dark" style="margin-top:6px;">Masuk <svg class="ico"><use href="#i-arrow"/></svg></button>
+      </form>
+      <p style="text-align:center;font-size:.78rem;margin-top:16px;color:var(--ink-muted);">
+        Belum punya akun? <a href="#" id="toRegister" style="color:var(--ink);font-weight:600;text-decoration:underline;">Daftar di sini</a>
+      </p>
+    </div>
+
+    <!-- Form Register -->
+    <div id="registerView" hidden>
+      <h2 class="serif" id="regTitle">Daftar Akun Baru</h2>
+      <p class="sub">Buat akun untuk menikmati kemudahan memesan laundry.</p>
+      <form id="registerForm" novalidate>
+        <div class="fld"><label for="regName">Nama Lengkap</label><input id="regName" type="text" maxlength="60" placeholder="Masukkan nama" autocomplete="name"><span class="msg">Nama minimal 2 karakter.</span></div>
+        <div class="fld"><label for="regEmail">Email</label><input id="regEmail" type="email" maxlength="100" placeholder="nama@email.com" autocomplete="email"><span class="msg">Email valid diperlukan.</span></div>
+        <div class="fld"><label for="regPass">Kata Sandi</label><input id="regPass" type="password" placeholder="Minimal 8 karakter" autocomplete="new-password"><span class="msg">Kata sandi minimal 8 karakter.</span></div>
+        <button type="submit" class="btn btn-dark" style="margin-top:6px;">Daftar <svg class="ico"><use href="#i-arrow"/></svg></button>
+      </form>
+      <p style="text-align:center;font-size:.78rem;margin-top:16px;color:var(--ink-muted);">
+        Sudah punya akun? <a href="#" id="toLogin" style="color:var(--ink);font-weight:600;text-decoration:underline;">Masuk di sini</a>
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status"></div>
+
+<script src="api.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

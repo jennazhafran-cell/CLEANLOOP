@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dashboard — CleanLoop</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0a0a0a">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="CleanLoop">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='9' fill='%230a0a0a'/%3E%3Cpath d='M20 5a15 15 0 1 0 0 30' fill='none' stroke='%23fff' stroke-width='4' stroke-linecap='round'/%3E%3Cpath d='M20 13a7 7 0 1 0 7 7' fill='none' stroke='%23fff' stroke-width='4' stroke-linecap='round'/%3E%3Ccircle cx='27' cy='13' r='3' fill='%23fff'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+<div class="app">
+  <aside class="side">
+    <a href="index.html" class="brand" aria-label="Kembali ke beranda">
+      <img src="images/logo.png" alt="Logo CleanLoop" class="brand-img-dash">
+      <span><b>CleanLoop</b><small>Dashboard</small></span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Menu dashboard"></nav>
+    <div class="me" id="me"></div>
+  </aside>
+  <section class="content">
+    <div class="top">
+      <div><h1 class="serif" id="pageTitle"></h1><p id="hello"></p></div>
+      <a href="index.html" class="btn btn-outline">← Ke situs</a>
+    </div>
+    <div id="view"></div>
+  </section>
+</div>
+<div class="toast" id="toast" role="status"></div>
+<script src="api.js"></script>
+<script src="dashboard.js"></script>
+</body> 
+</body>
+</html>
